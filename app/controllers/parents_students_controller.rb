@@ -1,4 +1,5 @@
 class ParentsStudentsController < ApplicationController
+
   before_action :set_parents_student, only: [:show, :edit, :update, :destroy]
 
   # GET /parents_students

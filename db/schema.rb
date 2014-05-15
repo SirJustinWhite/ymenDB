@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514222715) do
+ActiveRecord::Schema.define(version: 20140515071847) do
 
   create_table "parents", force: true do |t|
     t.string   "last_name"
@@ -77,6 +77,13 @@ ActiveRecord::Schema.define(version: 20140514222715) do
     t.text     "other_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

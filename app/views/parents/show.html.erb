@@ -1,114 +1,69 @@
-<div class="container well">
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="container">
 
+      <div class="col-lg-8 col-lg-offset-2">
+      <h1>Parent</h1>
+        <!-- ===== vCard Navigation ===== -->
+        <div class="row w">
+          <div class="col-md-4">
+            <%= image_tag "avatar.jpg", :class => "img-responsive" %>
+          <ul class="nav nav-tabs nav-stacked" id="myTab">
+            <li class="active"><a href="#about">General</a></li>
+            <li><a href="#profile">Education Information</a></li>
+            <li><a href="#portfolio">YMEN Info</a></li>
+            <li><a href="#contact">Other</a></li>
+            <li><a href="#students">Family Information</a></li>
+          </ul>         
+        </div><!-- col-md-4 -->
 
-<p>
-  <strong>First name:</strong>
-  <%= @parent.first_name %>
-</p>
+        <!-- ===== vCard Content ===== -->
+          <div class="col-md-8">
+            <div class="tab-content">
+            
+              <!-- ===== First Tab ===== -->
+            <div class="tab-pane active" id="about">
+              <h3><%= @parent.first_name %> <%= @parent.last_name %></h3>
+              <h5>Parent | <%= @parent.occupation %></h5>
+              <hr>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @parent.last_name %>
-</p>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p class="sm">
+                    <i class="icon-globe"></i> - <%= @parent.address %> 
+                      <%= @parent.zipcode %> <br/>
+                  <i class="icon-envelope"></i> - <%= @parent.email %>  
+                  </p>
+                </div><!-- col-xs-6 -->
+                
+                <div class="col-xs-6">
+                  <p class="sm">
+                    <i class="icon-phone"></i> - <%= @parent.main_phone %> <br/>
+                    <i class="icon-home"></i> - <%= @parent.alternative_phone %>  
+                  </p>
+                </div><!-- col-xs-6 -->
+              </div><!-- row -->
+              
+              <h4><i class="icon-briefcase"></i> Business Information</h4>
+                <p class="sm">
+          
+                  <strong>Business name:</strong><%= @parent.business_name %><br />
 
+                  <strong>Business address:</strong><%= @parent.business_address %>
+                </p>
 
-<p>
-  <strong>Main phone:</strong>
-  <%= @parent.main_phone %>
-</p>
-
-<p>
-  <strong>Alternative phone:</strong>
-  <%= @parent.alternative_phone %>
-</p>
-
-<p>
-  <strong>Birth date:</strong>
-  <%= @parent.birth_date %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @parent.email %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @parent.address %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @parent.zipcode %>
-</p>
-
-<p>
-  <strong>Occupation:</strong>
-  <%= @parent.occupation %>
-</p>
-
-<p>
-  <strong>Business name:</strong>
-  <%= @parent.business_name %>
-</p>
-
-<p>
-  <strong>Business address:</strong>
-  <%= @parent.business_address %>
-</p>
-
-<p>
-  <strong>Point of contact:</strong>
-  <%= @parent.point_of_contact %>
-</p>
-
-<p>
-  <strong>Ymen start date:</strong>
-  <%= @parent.ymen_start_date %>
-</p>
-
-<p>
-  <strong>Church:</strong>
-  <%= @parent.church %>
-</p>
-
-<p>
-  <strong>Other children in household:</strong>
-  <%= @parent.other_children_in_household %>
-</p>
-
-<p>
-  <strong>Martial status:</strong>
-  <%= @parent.martial_status %>
-</p>
-
-<p>
-  <strong>Anniversary date:</strong>
-  <%= @parent.anniversary_date %>
-</p>
-
-<p>
-  <strong>Transcript release form:</strong>
-  <%= @parent.transcript_release_form %>
-</p>
-
-<p>
-  <strong>Signed emergency slip:</strong>
-  <%= @parent.signed_emergency_slip %>
-</p>
-
-<p>
-  <strong>Fafsa completed:</strong>
-  <%= @parent.fafsa_completed %>
-</p>
-
-<p>
-  <strong>Application complete:</strong>
-  <%= @parent.application_complete %>
-</p>
-
-<p>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Birthdate: </strong><%= @parent.birth_date %> <span class="pull-right"><strong>Age: </strong><%= @parent.age %></span></li>
+                   
+                    <li class="list-group-item"><strong>Church: </strong><%= @parent.church %></li>
+                    <li class="list-group-item"><strong>Point of Contact: </strong><%= @parent.point_of_contact %></li>
+                </ul>
+            </div><!-- tab about -->
+            
+              <!-- ===== Second Tab ===== -->
+            <div class="tab-pane" id="profile">
+              <h4><i class="icon-file-text-alt"></i> Education</h4>
+              <p class="sm">
+                <p>
   <strong>High school attended:</strong>
   <%= @parent.high_school_attended %>
 </p>
@@ -117,27 +72,118 @@
   <strong>College attended:</strong>
   <%= @parent.college_attended %>
 </p>
+              </p>
+              
+            </div><!-- Tab Profile -->
+            
+              <!-- ===== Third Tab ===== -->
+            <div class="tab-pane" id="portfolio">
+              <div class="row">
+                <div class ="container">
+                  <h4>General</h4>
+                  <p class="sm">
+                    <strong>YMEN start date:</strong> <%= @parent.ymen_start_date %>.<br/>
+                  </p>
+              <h4>Parent Involement</h4>
+              <p class="sm">
+                <strong>Current parent involvement activities:</strong>
+                <%= @parent.current_parent_involvement_activities %> <br />
+                <strong>Current parent involvement hours:</strong>
+                <%= @parent.current_parent_involvement_hours %>
+              </p>
+              <h4>Form Completion</h4>
+                <strong>Transcript release form:</strong>
+                <%= @parent.transcript_release_form %><br />
+                <strong>Signed emergency slip:</strong>
+                <%= @parent.signed_emergency_slip %><br />
+                <strong>Fafsa completed:</strong>
+                <%= @parent.fafsa_completed %><br />
+                <strong>Application complete:</strong>
+                <%= @parent.application_complete %>
+                </div>
+              </div><!-- row -->
+            </div><!-- /Tab Portfolio -->
+            
+              <!-- ===== Fourth Tab ===== -->
+            <div class="tab-pane" id="contact">
+              <div class="row">
+                <div class ="container">
+                  <h4>Misc</h4>
+                    <p class="sm">                    
+                      <strong>Martial status:</strong>
+                      <%= @parent.martial_status %><br />
+                      <strong>Anniversary date:</strong>
+                      <%= @parent.anniversary_date %>
+                    </p>
+                  <h4>Family Notes</h4>
+                    <p class="sm">
+                      <%= @parent.family_notes %>
+                    </p>
+                  <h4>Other Notes</h4>
+                    <p class="sm">
+                      <%= @parent.other_notes %>
+                    </p>
+                </div>
+              </div><!-- row -->
+            </div><!-- Tab Contact -->
 
-<p>
-  <strong>Current parent involvement activities:</strong>
-  <%= @parent.current_parent_involvement_activities %>
-</p>
+          <!-- ===== FIFTH Tab ===== -->
+            <div class="tab-pane" id="students">
+              <div class="row">
+                <div class ="container">
+                    <h4>Enrolled Students</h4>
+                    <hr>
 
-<p>
-  <strong>Current parent involvement hours:</strong>
-  <%= @parent.current_parent_involvement_hours %>
-</p>
+                       <!-- List Parents -->
+                      <% @mystudents = @parent.students.first(2) %>
+                      <p class="sm"> <grey>Student #1</grey> |  <%= link_to "#{@mystudents.first.first_name} #{@mystudents.first.last_name}", @mystudents.first %></p>
+                      <% if @mystudents.second.present? %>
+                          <p class="sm"><grey>Student #2</grey> | <%= link_to "#{@mystudents.second.first_name} #{@mystudents.second.last_name}", @mystudents.second %> </p>
+                      <% else %>
+                          <p> No second student found. </p>
+                      <% end %>
+                      <!-- END List Parents -->
+                <p>
+                  <strong>Other children in household:</strong>
+                  <%= @parent.other_children_in_household %>
+                </p>
 
-<p>
-  <strong>Family notes:</strong>
-  <%= @parent.family_notes %>
-</p>
+                </div>
+              </div><!-- row -->
+            </div><!-- Tab Parents -->
+            
+          </div><!-- Tab Content -->
+          </div><!-- col-md-8 -->
+        </div><!-- row w -->
+        </br>
+        <p class="pull-right"><%= link_to 'Edit', edit_parent_path(@parent), :class=> "btn btn-warning" %> | <%= link_to 'Back', parents_path, :class=> "btn btn-primary" %></p>
+      </div><!-- col-lg-6 -->
+    </div><!-- /.container -->
+  </div><!-- /.row -->
+<br />
 
-<p>
-  <strong>Other notes:</strong>
-  <%= @parent.other_notes %>
-</p>
 
-<%= link_to 'Edit', edit_parent_path(@parent) %> |
-<%= link_to 'Back', parents_path %>
+<div class="row">
+  <div class="container">
+  <p id="notice"><%= notice %></p>
+
+ 
+
+
+
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="assets/javascripts/jquery.js"></script>
+      <script src="assets/javascripts/bootstrap.min.js"></script>
+    <script>
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })  
+    </script>    
+
+
+  </div>
 </div>
