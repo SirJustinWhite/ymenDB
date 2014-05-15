@@ -1,0 +1,16 @@
+<div class="container well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @parents_student.parent.first_name + " " + @parents_student.parent.last_name %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @parents_student.student.first_name + " " + @parents_student.student.last_name %>
+</p>
+
+<%= link_to 'Edit', edit_parents_student_path(@parents_student) %> |
+<%= link_to 'Back', parents_students_path %>
+</div>

@@ -1,0 +1,106 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_phone %><br>
+    <%= f.text_field :cell_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :home_phone %><br>
+    <%= f.text_field :home_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :social_security_number %><br>
+    <%= f.text_field :social_security_number %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :current_school %><br>
+    <%= f.text_field :current_school %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_school %><br>
+    <%= f.text_field :previous_school %>
+  </div>
+  <div class="field">
+    <%= f.label :grade_level %><br>
+    <%= f.text_field :grade_level %>
+  </div>
+  <div class="field">
+    <%= f.label :point_of_contact %><br>
+    <%= f.text_field :point_of_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :ymen_start_date %><br>
+    <%= f.date_select :ymen_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :church %><br>
+    <%= f.text_field :church %>
+  </div>
+  <div class="field">
+    <%= f.label :resume_completed %><br>
+    <%= f.text_field :resume_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :leadership_roles %><br>
+    <%= f.text_field :leadership_roles %>
+  </div>
+  <div class="field">
+    <%= f.label :other_organizations_involved %><br>
+    <%= f.text_field :other_organizations_involved %>
+  </div>
+  <div class="field">
+    <%= f.label :num_current_mentors %><br>
+    <%= f.number_field :num_current_mentors %>
+  </div>
+  <div class="field">
+    <%= f.label :names_of_current_mentors %><br>
+    <%= f.text_field :names_of_current_mentors %>
+  </div>
+  <div class="field">
+    <%= f.label :family_notes %><br>
+    <%= f.text_area :family_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :other_notes %><br>
+    <%= f.text_area :other_notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

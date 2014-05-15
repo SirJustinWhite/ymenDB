@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  cell_phone: MyString
+  home_phone: MyString
+  address: MyText
+  zipcode: MyString
+  social_security_number: MyString
+  birth_date: 2014-05-14
+  email: MyString
+  current_school: MyString
+  previous_school: MyString
+  grade_level: MyString
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-14
+  church: MyString
+  resume_completed: MyString
+  leadership_roles: MyString
+  other_organizations_involved: MyString
+  num_current_mentors: 1
+  names_of_current_mentors: MyString
+  family_notes: MyText
+  other_notes: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  cell_phone: MyString
+  home_phone: MyString
+  address: MyText
+  zipcode: MyString
+  social_security_number: MyString
+  birth_date: 2014-05-14
+  email: MyString
+  current_school: MyString
+  previous_school: MyString
+  grade_level: MyString
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-14
+  church: MyString
+  resume_completed: MyString
+  leadership_roles: MyString
+  other_organizations_involved: MyString
+  num_current_mentors: 1
+  names_of_current_mentors: MyString
+  family_notes: MyText
+  other_notes: MyText

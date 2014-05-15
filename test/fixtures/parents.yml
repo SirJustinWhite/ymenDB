@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  last_name: MyString
+  first_name: MyString
+  main_phone: MyString
+  alternative_phone: MyString
+  birth_date: 2014-05-14
+  email: MyString
+  address: MyText
+  zipcode: MyString
+  occupation: MyString
+  business_name: MyString
+  business_address: MyText
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-14
+  church: MyString
+  other_children_in_household: MyString
+  martial_status: MyString
+  anniversary_date: 2014-05-14
+  transcript_release_form: MyString
+  signed_emergency_slip: MyString
+  fafsa_completed: MyString
+  application_complete: MyString
+  high_school_attended: MyString
+  college_attended: MyString
+  current_parent_involvement_activities: MyString
+  current_parent_involvement_hours: 1
+  family_notes: MyText
+  other_notes: MyText
+
+two:
+  last_name: MyString
+  first_name: MyString
+  main_phone: MyString
+  alternative_phone: MyString
+  birth_date: 2014-05-14
+  email: MyString
+  address: MyText
+  zipcode: MyString
+  occupation: MyString
+  business_name: MyString
+  business_address: MyText
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-14
+  church: MyString
+  other_children_in_household: MyString
+  martial_status: MyString
+  anniversary_date: 2014-05-14
+  transcript_release_form: MyString
+  signed_emergency_slip: MyString
+  fafsa_completed: MyString
+  application_complete: MyString
+  high_school_attended: MyString
+  college_attended: MyString
+  current_parent_involvement_activities: MyString
+  current_parent_involvement_hours: 1
+  family_notes: MyText
+  other_notes: MyText

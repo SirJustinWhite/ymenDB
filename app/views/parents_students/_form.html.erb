@@ -1,0 +1,25 @@
+<%= form_for(@parents_student) do |f| %>
+  <% if @parents_student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parents_student.errors.count, "error") %> prohibited this parents_student from being saved:</h2>
+
+      <ul>
+      <% @parents_student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :parent_id %><br>
+    <%= f.select :parent_id, Parent.all.collect{|parent| [parent.first_name + " " + parent.last_name, parent.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.select :student_id, Student.all.collect{|student| [student.first_name + " " + student.last_name, student.id]} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
