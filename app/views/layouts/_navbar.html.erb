@@ -8,14 +8,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/welcome/index">YMEN Database</a>
+
+
+          <a class="navbar-brand" href="/">YMEN Database</a>
+
+                     <a class="brand pull-right"> <img id="imgHeader" src="http://ymenchicago.com/wp-content/themes/ymen/images/ymen_logo.png"></a>
+
+
+
+
+
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class=<%= 'active' if params[:controller] == 'students' %>><a href="/students">Students</a></li>
             <li class=<%= 'active' if params[:controller] == 'parents' %>><a href="/parents">Parents</a></li>
-            <li class=<%= 'active' if params[:controller] == 'parents_students' %>><a href="/parents_students">Parents/Students Join</a></li>
+            <li class=<%= 'active' if params[:controller] == 'parents_students' %>>
+
           </ul>
+
+        
+
+
         </div><!--/.nav-collapse -->
       </div>
     </div>
