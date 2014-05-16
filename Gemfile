@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -39,10 +38,9 @@ gem "devise"
 
 gem 'bcrypt-ruby', '3.0.0'
 
-group :development do
-	# Use sqlite3 as the database for Active Record
-	gem 'sqlite3'
-end
+
+
+gem 'sqlite3', :group => [:development, :test]
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
