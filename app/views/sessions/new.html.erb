@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 well">
+	        <div class="intro-message">
+	        	<img class="thumbnail" src="http://ymenchicago.com/wp-content/uploads/ymen-logo-slice-header.jpg">
+	    		<h1>Welcome to the YMEN Database</h1>
+	    		<hr class="intro-divider">
+	    		<h2 class="form-signin-heading">Please sign in</h2>
+				<div class="row">
+				  <div class="span6 offset3">
+				    <%= form_for(:session, url: sessions_path) do |f| %>
+
+				      <%= f.label :email %>
+				      <%= f.text_field :email %>
+
+				      <%= f.label :password %>
+				      <%= f.password_field :password %>
+
+				      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+				    <% end %>
+
+				    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+				  </div>
+				</div>
+		</div>
+	</div>
+</div>

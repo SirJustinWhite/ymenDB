@@ -23,9 +23,38 @@
           <ul class="nav navbar-nav">
             <li class=<%= 'active' if params[:controller] == 'students' %>><a href="/students">Students</a></li>
             <li class=<%= 'active' if params[:controller] == 'parents' %>><a href="/parents">Parents</a></li>
-            <li class=<%= 'active' if params[:controller] == 'parents_students' %>>
-
+            <li class=<%= 'active' if params[:controller] == 'parents_students' %>><a href="/parents_students">Parents/Students Join</a></li>  
+          
           </ul>
+      <!-- Users / Sign In / Sign Out-->
+          <ul class="nav navbar-nav navbar-right">
+            <% if signed_in? %>
+              <li><%= link_to "Find Users", users_path %></li>
+              <li id="fat-menu" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <%= @current_user.name %> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to "Profile", current_user %></li>
+                      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                      <li class="divider"></li>
+                      <li>
+                        <%= link_to "Sign out", signout_path, method: "delete" %>
+                      </li>
+                    </ul>
+                  </li>
+
+
+            <% else %>
+              <li class="active"><a href="/signin">Login</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+            <% end %>
+          </ul>
+      <!-- END Users / Sign In / Sign Out -->
+     
+
+
+
 
         
 

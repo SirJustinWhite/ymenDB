@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-	has_many :parents, :through => :parents_students
+	has_many :parents, :through => :parents_students, dependent: :destroy
 	has_many :parents_students
 
   def age

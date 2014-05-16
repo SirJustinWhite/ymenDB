@@ -135,12 +135,27 @@
                     <hr>
 
                        <!-- List Parents -->
-                      <% @mystudents = @parent.students.first(2) %>
-                      <p class="sm"> <grey>Student #1</grey> |  <%= link_to "#{@mystudents.first.first_name} #{@mystudents.first.last_name}", @mystudents.first %></p>
+                      <% @mystudents = @parent.students.first(4) %>
+                      <% if @mystudents.second.present? %>
+                        <p class="sm"> <grey>Student #1</grey> |  <%= link_to "#{@mystudents.first.first_name} #{@mystudents.first.last_name}", @mystudents.first %></p>
+                      <% else %>
+                        <p> No first student found. </p>
+                      <% end %>
+
                       <% if @mystudents.second.present? %>
                           <p class="sm"><grey>Student #2</grey> | <%= link_to "#{@mystudents.second.first_name} #{@mystudents.second.last_name}", @mystudents.second %> </p>
                       <% else %>
                           <p> No second student found. </p>
+                      <% end %>
+                      <% if @mystudents.third.present? %>
+                          <p class="sm"><grey>Student #2</grey> | <%= link_to "#{@mystudents.second.first_name} #{@mystudents.second.last_name}", @mystudents.second %> </p>
+                      <% else %>
+                          <p> No third student found. </p>
+                      <% end %>
+                      <% if @mystudents.fourth.present? %>
+                          <p class="sm"><grey>Student #2</grey> | <%= link_to "#{@mystudents.second.first_name} #{@mystudents.second.last_name}", @mystudents.second %> </p>
+                      <% else %>
+                          <p> No fourth student found. </p>
                       <% end %>
                       <!-- END List Parents -->
                 <p>
