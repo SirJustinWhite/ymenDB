@@ -136,7 +136,7 @@
 
                        <!-- List Parents -->
                       <% @mystudents = @parent.students.first(4) %>
-                      <% if @mystudents.second.present? %>
+                      <% if @mystudents.first.present? %>
                         <p class="sm"> <grey>Student #1</grey> |  <%= link_to "#{@mystudents.first.first_name} #{@mystudents.first.last_name}", @mystudents.first %></p>
                       <% else %>
                         <p> No first student found. </p>
