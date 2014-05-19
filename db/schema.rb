@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516210319) do
+ActiveRecord::Schema.define(version: 20140519201206) do
 
   create_table "grades", force: true do |t|
     t.integer  "student_id"
@@ -97,6 +97,19 @@ ActiveRecord::Schema.define(version: 20140516210319) do
     t.string   "names_of_current_mentors"
     t.text     "family_notes"
     t.text     "other_notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trips", force: true do |t|
+    t.text     "ymen_trips"
+    t.integer  "num_ymen_camping_trips"
+    t.text     "camping_locations"
+    t.integer  "num_vocational_trips"
+    t.text     "businesses_visited"
+    t.integer  "num_cultural_trips"
+    t.text     "cultural_places_visited"
+    t.text     "ymen_trips_fun_listed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

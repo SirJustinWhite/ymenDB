@@ -1,6 +1,8 @@
 Ymen::Application.routes.draw do
 
 
+  resources :trips
+
   resources :grades
 
   resources :users

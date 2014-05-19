@@ -1,0 +1,41 @@
+<h1>Listing trips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ymen trips</th>
+      <th>Num ymen camping trips</th>
+      <th>Camping locations</th>
+      <th>Num vocational trips</th>
+      <th>Businesses visited</th>
+      <th>Num cultural trips</th>
+      <th>Cultural places visited</th>
+      <th>Ymen trips fun listed</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr>
+        <td><%= trip.ymen_trips %></td>
+        <td><%= trip.num_ymen_camping_trips %></td>
+        <td><%= trip.camping_locations %></td>
+        <td><%= trip.num_vocational_trips %></td>
+        <td><%= trip.businesses_visited %></td>
+        <td><%= trip.num_cultural_trips %></td>
+        <td><%= trip.cultural_places_visited %></td>
+        <td><%= trip.ymen_trips_fun_listed %></td>
+        <td><%= link_to 'Show', trip %></td>
+        <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
+        <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trip', new_trip_path %>

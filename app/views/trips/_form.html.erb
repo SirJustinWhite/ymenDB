@@ -1,0 +1,49 @@
+<%= form_for(@trip) do |f| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+      <% @trip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ymen_trips %><br>
+    <%= f.text_area :ymen_trips %>
+  </div>
+  <div class="field">
+    <%= f.label :num_ymen_camping_trips %><br>
+    <%= f.number_field :num_ymen_camping_trips %>
+  </div>
+  <div class="field">
+    <%= f.label :camping_locations %><br>
+    <%= f.text_area :camping_locations %>
+  </div>
+  <div class="field">
+    <%= f.label :num_vocational_trips %><br>
+    <%= f.number_field :num_vocational_trips %>
+  </div>
+  <div class="field">
+    <%= f.label :businesses_visited %><br>
+    <%= f.text_area :businesses_visited %>
+  </div>
+  <div class="field">
+    <%= f.label :num_cultural_trips %><br>
+    <%= f.number_field :num_cultural_trips %>
+  </div>
+  <div class="field">
+    <%= f.label :cultural_places_visited %><br>
+    <%= f.text_area :cultural_places_visited %>
+  </div>
+  <div class="field">
+    <%= f.label :ymen_trips_fun_listed %><br>
+    <%= f.text_area :ymen_trips_fun_listed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

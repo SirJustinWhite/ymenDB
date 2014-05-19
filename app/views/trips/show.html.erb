@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ymen trips:</strong>
+  <%= @trip.ymen_trips %>
+</p>
+
+<p>
+  <strong>Num ymen camping trips:</strong>
+  <%= @trip.num_ymen_camping_trips %>
+</p>
+
+<p>
+  <strong>Camping locations:</strong>
+  <%= @trip.camping_locations %>
+</p>
+
+<p>
+  <strong>Num vocational trips:</strong>
+  <%= @trip.num_vocational_trips %>
+</p>
+
+<p>
+  <strong>Businesses visited:</strong>
+  <%= @trip.businesses_visited %>
+</p>
+
+<p>
+  <strong>Num cultural trips:</strong>
+  <%= @trip.num_cultural_trips %>
+</p>
+
+<p>
+  <strong>Cultural places visited:</strong>
+  <%= @trip.cultural_places_visited %>
+</p>
+
+<p>
+  <strong>Ymen trips fun listed:</strong>
+  <%= @trip.ymen_trips_fun_listed %>
+</p>
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %>

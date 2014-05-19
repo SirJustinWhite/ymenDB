@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ymen_trips: MyText
+  num_ymen_camping_trips: 1
+  camping_locations: MyText
+  num_vocational_trips: 1
+  businesses_visited: MyText
+  num_cultural_trips: 1
+  cultural_places_visited: MyText
+  ymen_trips_fun_listed: MyText
+
+two:
+  ymen_trips: MyText
+  num_ymen_camping_trips: 1
+  camping_locations: MyText
+  num_vocational_trips: 1
+  businesses_visited: MyText
+  num_cultural_trips: 1
+  cultural_places_visited: MyText
+  ymen_trips_fun_listed: MyText
