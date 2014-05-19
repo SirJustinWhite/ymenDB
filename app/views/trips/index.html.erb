@@ -1,8 +1,10 @@
 <h1>Listing trips</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table table-striped">
   <thead>
     <tr>
+      <th>Student</th>
       <th>Ymen trips</th>
       <th>Num ymen camping trips</th>
       <th>Camping locations</th>
@@ -20,6 +22,7 @@
   <tbody>
     <% @trips.each do |trip| %>
       <tr>
+        <td><%= link_to "#{trip.student.name}", trip.student %> </td>
         <td><%= trip.ymen_trips %></td>
         <td><%= trip.num_ymen_camping_trips %></td>
         <td><%= trip.camping_locations %></td>
@@ -35,6 +38,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

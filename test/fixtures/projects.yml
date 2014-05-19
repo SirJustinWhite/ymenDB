@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  project_name: MyString
+  project_year: MyString
+  project_hours: MyString
+
+two:
+  student_id: 1
+  project_name: MyString
+  project_year: MyString
+  project_hours: MyString

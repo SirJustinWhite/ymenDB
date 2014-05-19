@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  student_id: 1
   ymen_trips: MyText
   num_ymen_camping_trips: 1
   camping_locations: MyText
@@ -11,6 +12,7 @@ one:
   ymen_trips_fun_listed: MyText
 
 two:
+  student_id: 1
   ymen_trips: MyText
   num_ymen_camping_trips: 1
   camping_locations: MyText

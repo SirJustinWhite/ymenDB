@@ -1,0 +1,34 @@
+<h1>Listing projects</h1>
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Project name</th>
+      <th>Project year</th>
+      <th>Project hours</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to "#{project.student.name}", project.student %> </td>
+        <td><%= project.project_name %></td>
+        <td><%= project.project_year %></td>
+        <td><%= project.project_hours %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>

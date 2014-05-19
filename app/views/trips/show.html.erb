@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Student:</strong>
+  <td><%= link_to "#{@trip.student.name}", @trip.student %> </td>
+</p>
+
+<p>
   <strong>Ymen trips:</strong>
   <%= @trip.ymen_trips %>
 </p>
