@@ -1,6 +1,10 @@
 Ymen::Application.routes.draw do
 
 
+  resources :volunteers
+
+  resources :employees
+
   resources :projects
 
   resources :trips
@@ -27,6 +31,7 @@ Ymen::Application.routes.draw do
    match '/signup',  to: 'users#new',            via: 'get'
    match '/signin',  to: 'sessions#new',         via: 'get'
    match '/signout', to: 'sessions#destroy',     via: 'delete'
+   match '/staff',  to: 'employees#index',         via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

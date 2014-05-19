@@ -1,0 +1,159 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @volunteer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @volunteer.last_name %>
+</p>
+
+<p>
+  <strong>Cell phone:</strong>
+  <%= @volunteer.cell_phone %>
+</p>
+
+<p>
+  <strong>Home phone:</strong>
+  <%= @volunteer.home_phone %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @volunteer.birth_date %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @volunteer.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @volunteer.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @volunteer.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @volunteer.zipcode %>
+</p>
+
+<p>
+  <strong>Emergency contact name:</strong>
+  <%= @volunteer.emergency_contact_name %>
+</p>
+
+<p>
+  <strong>Emergency contact phone:</strong>
+  <%= @volunteer.emergency_contact_phone %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @volunteer.occupation %>
+</p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @volunteer.business_name %>
+</p>
+
+<p>
+  <strong>Point of contact:</strong>
+  <%= @volunteer.point_of_contact %>
+</p>
+
+<p>
+  <strong>Ymen start date:</strong>
+  <%= @volunteer.ymen_start_date %>
+</p>
+
+<p>
+  <strong>Church:</strong>
+  <%= @volunteer.church %>
+</p>
+
+<p>
+  <strong>Other children in household:</strong>
+  <%= @volunteer.other_children_in_household %>
+</p>
+
+<p>
+  <strong>Marital status:</strong>
+  <%= @volunteer.marital_status %>
+</p>
+
+<p>
+  <strong>Anniversary date:</strong>
+  <%= @volunteer.anniversary_date %>
+</p>
+
+<p>
+  <strong>Background check completed:</strong>
+  <%= @volunteer.background_check_completed %>
+</p>
+
+<p>
+  <strong>Application completed:</strong>
+  <%= @volunteer.application_completed %>
+</p>
+
+<p>
+  <strong>High school attended:</strong>
+  <%= @volunteer.high_school_attended %>
+</p>
+
+<p>
+  <strong>College attended:</strong>
+  <%= @volunteer.college_attended %>
+</p>
+
+<p>
+  <strong>Previous volunteer places:</strong>
+  <%= @volunteer.previous_volunteer_places %>
+</p>
+
+<p>
+  <strong>Reference name:</strong>
+  <%= @volunteer.reference_name %>
+</p>
+
+<p>
+  <strong>Reference phone number:</strong>
+  <%= @volunteer.reference_phone_number %>
+</p>
+
+<p>
+  <strong>Volunteer days:</strong>
+  <%= @volunteer.volunteer_days %>
+</p>
+
+<p>
+  <strong>Volunteer frequency:</strong>
+  <%= @volunteer.volunteer_frequency %>
+</p>
+
+<p>
+  <strong>Volunteer hours monthly:</strong>
+  <%= @volunteer.volunteer_hours_monthly %>
+</p>
+
+<p>
+  <strong>Family notes:</strong>
+  <%= @volunteer.family_notes %>
+</p>
+
+<p>
+  <strong>Other notes:</strong>
+  <%= @volunteer.other_notes %>
+</p>
+
+<%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
+<%= link_to 'Back', volunteers_path %>

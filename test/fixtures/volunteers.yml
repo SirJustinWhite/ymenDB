@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  cell_phone: MyString
+  home_phone: MyString
+  birth_date: 2014-05-19
+  email: MyString
+  address: MyText
+  city: MyString
+  zipcode: MyString
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  occupation: MyString
+  business_name: MyString
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-19
+  church: MyString
+  other_children_in_household: MyString
+  marital_status: MyString
+  anniversary_date: 2014-05-19
+  background_check_completed: MyString
+  application_completed: MyString
+  high_school_attended: MyString
+  college_attended: MyString
+  previous_volunteer_places: MyText
+  reference_name: MyString
+  reference_phone_number: MyString
+  volunteer_days: MyString
+  volunteer_frequency: MyString
+  volunteer_hours_monthly: MyString
+  family_notes: MyText
+  other_notes: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  cell_phone: MyString
+  home_phone: MyString
+  birth_date: 2014-05-19
+  email: MyString
+  address: MyText
+  city: MyString
+  zipcode: MyString
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  occupation: MyString
+  business_name: MyString
+  point_of_contact: MyString
+  ymen_start_date: 2014-05-19
+  church: MyString
+  other_children_in_household: MyString
+  marital_status: MyString
+  anniversary_date: 2014-05-19
+  background_check_completed: MyString
+  application_completed: MyString
+  high_school_attended: MyString
+  college_attended: MyString
+  previous_volunteer_places: MyText
+  reference_name: MyString
+  reference_phone_number: MyString
+  volunteer_days: MyString
+  volunteer_frequency: MyString
+  volunteer_hours_monthly: MyString
+  family_notes: MyText
+  other_notes: MyText

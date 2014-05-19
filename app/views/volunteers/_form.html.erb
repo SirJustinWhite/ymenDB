@@ -1,0 +1,141 @@
+<%= form_for(@volunteer) do |f| %>
+  <% if @volunteer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@volunteer.errors.count, "error") %> prohibited this volunteer from being saved:</h2>
+
+      <ul>
+      <% @volunteer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_phone %><br>
+    <%= f.text_field :cell_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :home_phone %><br>
+    <%= f.text_field :home_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_name %><br>
+    <%= f.text_field :emergency_contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_phone %><br>
+    <%= f.text_field :emergency_contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :occupation %><br>
+    <%= f.text_field :occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :business_name %><br>
+    <%= f.text_field :business_name %>
+  </div>
+  <div class="field">
+    <%= f.label :point_of_contact %><br>
+    <%= f.text_field :point_of_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :ymen_start_date %><br>
+    <%= f.date_select :ymen_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :church %><br>
+    <%= f.text_field :church %>
+  </div>
+  <div class="field">
+    <%= f.label :other_children_in_household %><br>
+    <%= f.text_field :other_children_in_household %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br>
+    <%= f.text_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :anniversary_date %><br>
+    <%= f.date_select :anniversary_date %>
+  </div>
+  <div class="field">
+    <%= f.label :background_check_completed %><br>
+    <%= f.text_field :background_check_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :application_completed %><br>
+    <%= f.text_field :application_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :high_school_attended %><br>
+    <%= f.text_field :high_school_attended %>
+  </div>
+  <div class="field">
+    <%= f.label :college_attended %><br>
+    <%= f.text_field :college_attended %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_volunteer_places %><br>
+    <%= f.text_area :previous_volunteer_places %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_name %><br>
+    <%= f.text_field :reference_name %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_phone_number %><br>
+    <%= f.text_field :reference_phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :volunteer_days %><br>
+    <%= f.text_field :volunteer_days %>
+  </div>
+  <div class="field">
+    <%= f.label :volunteer_frequency %><br>
+    <%= f.text_field :volunteer_frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :volunteer_hours_monthly %><br>
+    <%= f.text_field :volunteer_hours_monthly %>
+  </div>
+  <div class="field">
+    <%= f.label :family_notes %><br>
+    <%= f.text_area :family_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :other_notes %><br>
+    <%= f.text_area :other_notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

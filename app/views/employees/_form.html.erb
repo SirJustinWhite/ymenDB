@@ -1,0 +1,129 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :main_phone %><br>
+    <%= f.text_field :main_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :alternative_phone %><br>
+    <%= f.text_field :alternative_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn_number %><br>
+    <%= f.number_field :ssn_number %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_name %><br>
+    <%= f.text_field :emergency_contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_phone %><br>
+    <%= f.text_field :emergency_contact_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :former_occupation %><br>
+    <%= f.text_field :former_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :former_business_name %><br>
+    <%= f.text_field :former_business_name %>
+  </div>
+  <div class="field">
+    <%= f.label :former_employment_address %><br>
+    <%= f.text_area :former_employment_address %>
+  </div>
+  <div class="field">
+    <%= f.label :ymen_start_date %><br>
+    <%= f.date_select :ymen_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :church %><br>
+    <%= f.text_field :church %>
+  </div>
+  <div class="field">
+    <%= f.label :other_children_in_household %><br>
+    <%= f.text_field :other_children_in_household %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br>
+    <%= f.text_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :anniversary_date %><br>
+    <%= f.date_select :anniversary_date %>
+  </div>
+  <div class="field">
+    <%= f.label :background_check_complete %><br>
+    <%= f.text_field :background_check_complete %>
+  </div>
+  <div class="field">
+    <%= f.label :high_school_attended %><br>
+    <%= f.text_field :high_school_attended %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_name %><br>
+    <%= f.text_field :reference_name %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_phone_number %><br>
+    <%= f.text_field :reference_phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :w2_completed %><br>
+    <%= f.text_field :w2_completed %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_signed %><br>
+    <%= f.text_field :contract_signed %>
+  </div>
+  <div class="field">
+    <%= f.label :family_notes %><br>
+    <%= f.text_area :family_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :other_notes %><br>
+    <%= f.text_area :other_notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

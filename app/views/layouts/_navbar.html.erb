@@ -10,7 +10,8 @@
           </button>
 
 
-          <a class="navbar-brand" href="/">YMEN Database</a>
+          <a class="navbar-brand hidden-sm" href="/">YMEN Database</a>
+          <a class="navbar-brand visible-sm" href="/">YMEN DB</a>
 
                      <a class="brand pull-right"> <img id="imgHeader" src="http://ymenchicago.com/wp-content/themes/ymen/images/ymen_logo.png"></a>
         </div>
@@ -35,8 +36,8 @@
                     </ul>
                 </li>  
             <li class=<%= 'active' if params[:controller] == 'parents' %>><a href="/parents">Parents</a></li>
-            <li><a href="#">Staff</a></li>
-            <li><a href="#">Volunteers</a></li>            
+            <li><a href="/employees">Employees</a></li>
+            <li><a href="/volunteers">Volunteers</a></li>            
           </ul>
       <!-- Users / Sign In / Sign Out-->
           <ul class="nav navbar-nav navbar-right">

@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  main_phone: MyString
+  alternative_phone: MyString
+  ssn_number: 1
+  birth_date: 2014-05-19
+  email: MyString
+  address: MyText
+  city: MyString
+  zipcode: MyString
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  former_occupation: MyString
+  former_business_name: MyString
+  former_employment_address: MyText
+  ymen_start_date: 2014-05-19
+  church: MyString
+  other_children_in_household: MyString
+  marital_status: MyString
+  anniversary_date: 2014-05-19
+  background_check_complete: MyString
+  high_school_attended: MyString
+  reference_name: MyString
+  reference_phone_number: MyString
+  w2_completed: MyString
+  contract_signed: MyString
+  family_notes: MyText
+  other_notes: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  main_phone: MyString
+  alternative_phone: MyString
+  ssn_number: 1
+  birth_date: 2014-05-19
+  email: MyString
+  address: MyText
+  city: MyString
+  zipcode: MyString
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  former_occupation: MyString
+  former_business_name: MyString
+  former_employment_address: MyText
+  ymen_start_date: 2014-05-19
+  church: MyString
+  other_children_in_household: MyString
+  marital_status: MyString
+  anniversary_date: 2014-05-19
+  background_check_complete: MyString
+  high_school_attended: MyString
+  reference_name: MyString
+  reference_phone_number: MyString
+  w2_completed: MyString
+  contract_signed: MyString
+  family_notes: MyText
+  other_notes: MyText
