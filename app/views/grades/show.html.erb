@@ -1,0 +1,96 @@
+<div class="container well">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <td><%= link_to "#{@grade.student.name}", @grade.student %> </td>
+</p>
+
+<p>
+  <strong>Student ID:</strong>
+  <%= @grade.student_id %>
+</p>
+
+<p>
+  <strong>Cumulative gpa:</strong>
+  <%= @grade.cumulative_gpa %>
+</p>
+
+<p>
+  <strong>Previous year gpa:</strong>
+  <%= @grade.previous_year_gpa %>
+</p>
+
+<p>
+  <strong>Previous year absences:</strong>
+  <%= @grade.previous_year_absences %>
+</p>
+
+<p>
+  <strong>Current q1 absences:</strong>
+  <%= @grade.current_q1_absences %>
+</p>
+
+<p>
+  <strong>Current q2 absences:</strong>
+  <%= @grade.current_q2_absences %>
+</p>
+
+<p>
+  <strong>Current q3 absences:</strong>
+  <%= @grade.current_q3_absences %>
+</p>
+
+<p>
+  <strong>Current q4 absences:</strong>
+  <%= @grade.current_q4_absences %>
+</p>
+
+<p>
+  <strong>Current q1 grades:</strong>
+  <%= @grade.current_q1_grades %>
+</p>
+
+<p>
+  <strong>Current q2 grades:</strong>
+  <%= @grade.current_q2_grades %>
+</p>
+
+<p>
+  <strong>Current q3 grades:</strong>
+  <%= @grade.current_q3_grades %>
+</p>
+
+<p>
+  <strong>Current q4 grades:</strong>
+  <%= @grade.current_q4_grades %>
+</p>
+
+<p>
+  <strong>Student promoted:</strong>
+  <%= @grade.student_promoted %>
+</p>
+
+<p>
+  <strong>Class rank:</strong>
+  <%= @grade.class_rank %>
+</p>
+
+<p>
+  <strong>Colleges considered:</strong>
+  <%= @grade.colleges_considered %>
+</p>
+
+<p>
+  <strong>Application complete:</strong>
+  <%= @grade.application_complete %>
+</p>
+
+<p>
+  <strong>Num college trips:</strong>
+  <%= @grade.num_college_trips %>
+</p>
+
+<%= link_to 'Edit', edit_grade_path(@grade) %> |
+<%= link_to 'Back', grades_path %>
+</div>

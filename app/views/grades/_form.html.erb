@@ -1,0 +1,76 @@
+<%= form_for(@grade) do |f| %>
+
+
+
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.select :student_id, Student.all.collect{|student| [student.name, student.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :cumulative_gpa %><br>
+    <%= f.text_field :cumulative_gpa %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_year_gpa %><br>
+    <%= f.text_field :previous_year_gpa %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_year_absences %><br>
+    <%= f.text_field :previous_year_absences %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q1_absences %><br>
+    <%= f.number_field :current_q1_absences %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q2_absences %><br>
+    <%= f.number_field :current_q2_absences %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q3_absences %><br>
+    <%= f.number_field :current_q3_absences %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q4_absences %><br>
+    <%= f.number_field :current_q4_absences %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q1_grades %><br>
+    <%= f.text_field :current_q1_grades %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q2_grades %><br>
+    <%= f.text_field :current_q2_grades %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q3_grades %><br>
+    <%= f.text_field :current_q3_grades %>
+  </div>
+  <div class="field">
+    <%= f.label :current_q4_grades %><br>
+    <%= f.text_field :current_q4_grades %>
+  </div>
+  <div class="field">
+    <%= f.label :student_promoted %><br>
+    <%= f.text_field :student_promoted %>
+  </div>
+  <div class="field">
+    <%= f.label :class_rank %><br>
+    <%= f.text_field :class_rank %>
+  </div>
+  <div class="field">
+    <%= f.label :colleges_considered %><br>
+    <%= f.text_area :colleges_considered %>
+  </div>
+  <div class="field">
+    <%= f.label :application_complete %><br>
+    <%= f.text_field :application_complete %>
+  </div>
+  <div class="field">
+    <%= f.label :num_college_trips %><br>
+    <%= f.number_field :num_college_trips %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

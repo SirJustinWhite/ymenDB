@@ -15,8 +15,8 @@
   <tbody>
     <% @parents_students.each do |parents_student| %>
       <tr>
-        <td><%= parents_student.parent.first_name + " " +parents_student.parent.last_name  %></td>
-        <td><%= parents_student.student.first_name + " " +parents_student.student.last_name  %></td>
+        <td><%= parents_student.parent.name  %></td>
+        <td><%= parents_student.student.name  %></td>
         <td><%= link_to 'Show', parents_student %></td>
         <td><%= link_to 'Edit', edit_parents_student_path(parents_student) %></td>
         <td><%= link_to 'Destroy', parents_student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

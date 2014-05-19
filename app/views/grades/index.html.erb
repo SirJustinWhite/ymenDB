@@ -1,0 +1,35 @@
+<div class="container well">
+<h1>Listing grades</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Student ID</th>
+      <th>Cumulative GPA</th>
+      <th>Previous Year GPA</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grades.each do |grade| %>
+      <tr>
+        <td><%= link_to "#{grade.student.name}", grade.student %> </td>
+        <td><%= grade.student.id %> </td>
+        <td><%= grade.cumulative_gpa %></td>
+        <td><%= grade.previous_year_gpa %></td>
+        <td><%= link_to 'Show', grade %></td>
+        <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
+        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grade', new_grade_path %>
+</div>

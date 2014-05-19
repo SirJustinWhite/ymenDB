@@ -1,0 +1,50 @@
+<!-- ===== Second Tab ===== -->
+<div class="tab-pane" id="profile">
+  <h4><i class="icon-file-text-alt"></i> Education</h4>
+  <p class="sm">
+    <grey>Grade Level</grey> | <%= @student.grade_level %>.<br/>
+    <grey>Current School</grey> | <%= @student.current_school %>.<br/>
+    <grey>Previous School</grey> | <%= @student.previous_school %>.<br/>
+  </p>
+    <!-- check for first grade record belonging to the student -->
+    <% @mygrades = @student.grades.first(2) %>
+    <% if @mygrades.first.present? %>
+
+      <h4><i class="icon-check"></i> GPA </h4>
+      <p class="sm">
+        <grey>Cumulative GPA</grey> | <%= @mygrades.first.cumulative_gpa %><br/>
+        <grey>Previous Year GPA</grey> | <%= @mygrades.first.previous_year_gpa %> <br/>
+      </p>
+
+      <h4><i class="icon-check"></i> Grades</h4>
+      <p class="sm">
+        <grey>Current Q1 Grades </grey> |  <%= @mygrades.first.current_q1_grades %><br/>
+        <grey>Current Q2 Grades </grey> |  <%= @mygrades.first.current_q2_grades %><br/>
+        <grey>Current Q3 Grades </grey> |  <%= @mygrades.first.current_q3_grades %><br/>
+        <grey>Current Q4 Grades </grey> |  <%= @mygrades.first.current_q4_grades %><br/>
+      </p>
+
+      <h4><i class="icon-check"></i> Attendance</h4>
+      <p class="sm">
+        <grey>Previous Year Absences</grey> | <%= @mygrades.first.previous_year_absences %> <br/>
+        <grey>Current Q1 Absences </grey> |  <%= @mygrades.first.current_q1_absences %><br/>
+        <grey>Current Q2 Absences </grey> |  <%= @mygrades.first.current_q2_absences %><br/>
+        <grey>Current Q3 Absences </grey> |  <%= @mygrades.first.current_q3_absences %><br/>
+        <grey>Current Q4 Absences </grey> |  <%= @mygrades.first.current_q4_absences %><br/>
+      </p>
+      <h4><i class="icon-check"></i> Misc</h4>
+      <p class="sm">
+        <grey>Student Promoted?</grey> | <%= @mygrades.first.student_promoted %> <br/>
+        <grey>Class Rank</grey> | <%= @mygrades.first.class_rank %> <br/>
+        <grey>Colleges Considered</grey> | <%= @mygrades.first.colleges_considered %> <br/>  
+        <grey>Applications Completed</grey> | <%= @mygrades.first.application_complete %> <br/>
+        <grey>Num. of College Trips</grey> | <%= @mygrades.first.num_college_trips %> <br/>
+      </p>
+    <% else %>
+        <p> No grade record found. </p>
+    <% end %> 
+
+
+
+
+</div><!-- Tab Profile -->

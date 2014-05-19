@@ -1,0 +1,20 @@
+<!-- ===== Fourth Tab ===== -->
+<div class="tab-pane" id="contact">
+<div class="row">
+  <div class ="container">
+    <h4>Misc</h4>
+      <p class="sm">
+        <grey>Resume Status: </grey><%= @student.resume_completed %> </br>
+        <grey>Other Organization Involvement: </grey><%= @student.other_organizations_involved %>
+      </p>
+    <h4>Family Notes</h4>
+      <p class="sm">
+        <%= @student.family_notes %>
+      </p>
+    <h4>Other Notes</h4>
+      <p class="sm">
+        <%= @student.other_notes %>
+      </p>
+  </div>
+</div><!-- row -->
+</div><!-- Tab Contact -->

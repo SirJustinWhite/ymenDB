@@ -21,8 +21,8 @@
   <tbody>
     <% @parents.each do |parent| %>
       <tr>
-        <td><%= parent.first_name %></td>
-        <td><%= parent.last_name %></td>
+        <td><%= link_to "#{parent.first_name}", parent %> </td>
+        <td><%= link_to "#{parent.last_name}", parent %> </td>
         <td><%= parent.main_phone %></td>
         <td><%= parent.birth_date %></td>
         <td><%= parent.email %></td>

@@ -1,6 +1,8 @@
 Ymen::Application.routes.draw do
 
 
+  resources :grades
+
   resources :users
 
   get "welcome/index"

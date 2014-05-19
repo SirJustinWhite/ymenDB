@@ -1,0 +1,26 @@
+<!-- ===== FIFTH Tab ===== -->
+  <div class="tab-pane" id="parents">
+    <div class="row">
+      <div class ="container">
+          <h4>Parents</h4>
+          <hr>
+
+             <!-- List Parents -->
+            <% @myparents = @student.parents.first(2) %>
+            <% if @myparents.first.present? %>
+                <p class="sm"> <grey>Parent #1</grey> |  <%= link_to "#{@myparents.first.first_name} #{@myparents.first.last_name}", @myparents.first %></p>
+            <% else %>
+                <p> No first parent found. </p>
+            <% end %> 
+
+            
+            <% if @myparents.second.present? %>
+                <p class="sm"><grey>Parent #2</grey> | <%= link_to "#{@myparents.second.first_name} #{@myparents.second.last_name}", @myparents.second %> </p>
+            <% else %>
+                <p> No second parent found. </p>
+            <% end %>
+            <!-- END List Parents -->
+
+      </div>
+    </div><!-- row -->
+  </div><!-- Tab Parents -->

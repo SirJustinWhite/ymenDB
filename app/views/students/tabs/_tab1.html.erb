@@ -1,0 +1,31 @@
+<!-- ===== First Tab ===== -->
+<div class="tab-pane active" id="about">
+  <h3><%= @student.first_name %> <%= @student.last_name %></h3>
+  <h5>Student ID: <%= @student.id %></h5>
+  <hr>
+  <div class="row">
+    <div class="col-xs-6">
+      <p class="sm">
+        <i class="icon-globe"></i> - <%= @student.address %> 
+          <%= @student.zipcode %> <br/>
+      <i class="icon-envelope"></i> - <%= @student.email %>  
+      </p>
+    </div><!-- col-xs-6 -->
+    
+    <div class="col-xs-6">
+      <p class="sm">
+        <i class="icon-phone"></i> - <%= @student.cell_phone %> <br/>
+        <i class="icon-home"></i> - <%= @student.home_phone %>  
+      </p>
+    </div><!-- col-xs-6 -->
+  </div><!-- row -->
+
+
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Birthdate: </strong><%= @student.birth_date %> <span class="pull-right"><strong>Age: </strong><%= @student.age %></span></li>
+        <li class="list-group-item"><strong>Social security number: </strong><%= @student.social_security_number %></li>
+        <li class="list-group-item"><strong>Church: </strong><%= @student.church %></li>
+        <li class="list-group-item"><strong>Point of Contact: </strong><%= @student.point_of_contact %></li>
+        <li class="list-group-item"><strong>Leadership Roles: </strong><%= @student.leadership_roles %></li>
+    </ul>
+</div><!-- tab about -->

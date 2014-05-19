@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  cumulative_gpa: 1.5
+  previous_year_gpa: 1.5
+  previous_year_absences: 1.5
+  current_q1_absences: 1
+  current_q2_absences: 1
+  current_q3_absences: 1
+  current_q4_absences: 1
+  current_q1_grades: MyString
+  current_q2_grades: MyString
+  current_q3_grades: MyString
+  current_q4_grades: MyString
+  student_promoted: MyString
+  class_rank: MyString
+  colleges_considered: MyText
+  application_complete: MyString
+  num_college_trips: 1
+
+two:
+  student_id: 1
+  cumulative_gpa: 1.5
+  previous_year_gpa: 1.5
+  previous_year_absences: 1.5
+  current_q1_absences: 1
+  current_q2_absences: 1
+  current_q3_absences: 1
+  current_q4_absences: 1
+  current_q1_grades: MyString
+  current_q2_grades: MyString
+  current_q3_grades: MyString
+  current_q4_grades: MyString
+  student_promoted: MyString
+  class_rank: MyString
+  colleges_considered: MyText
+  application_complete: MyString
+  num_college_trips: 1
