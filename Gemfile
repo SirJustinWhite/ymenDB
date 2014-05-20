@@ -43,6 +43,10 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate'
+
 
 
 # Use ActiveModel has_secure_password
