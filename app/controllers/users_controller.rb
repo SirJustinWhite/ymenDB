@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update]
+  before_action :signed_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id]) #potentially remove? otherwise remove this comment if nothing broke ;p 
   end
 
   # GET /users/new
@@ -82,6 +83,7 @@ def update
 
     def signed_in_user
       unless signed_in?
+        store_location
         flash[:warning] = "Please sign in."
         redirect_to signin_url
       end
@@ -91,5 +93,7 @@ def update
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
+
+
 
 end
