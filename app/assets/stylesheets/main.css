@@ -73,7 +73,6 @@ a:after {
 }
 
 .w {
-	background-color: #ffffff;
 	border: 1px solid #dddddd;
 	-moz-box-shadow: 5px 5px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 5px 5px rgba(0,0,0,0.2);
@@ -117,7 +116,7 @@ a:after {
 }
 
 .tab-content {
-	background-color: #ffffff;
+
 	padding-left: 15px;
 	padding-top: 20px;
 	padding-right: 15px;
