@@ -23,3 +23,7 @@ input {
   @extend .control-group;
   @extend .error;
 }
+
+div.navbar.navbar-inverse.navbar-fixed-top {
+  background-color: #4A4353;
+}
