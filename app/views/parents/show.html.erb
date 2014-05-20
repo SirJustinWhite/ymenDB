@@ -6,7 +6,7 @@
         <!-- ===== vCard Navigation ===== -->
         <div class="row w">
           <div class="col-md-4">
-            <%= image_tag "http://s3.evcdn.com/images/edpborder500/I0-001/004/340/550-2.jpeg_/frank-zappa-50.jpeg", :class => "img-responsive" %>
+            <%= gravatar_image_tag(@parent.email.gsub("spam", @parent.name), :alt => @parent.name, :class => 'img-responsive', :gravatar => { :size => 500, :secure => true, :default => 'https://pbs.twimg.com/profile_images/1711980924/organization_logo.jpg'}) %>
           <ul class="nav nav-tabs nav-stacked" id="myTab">
             <li class="active"><a href="#about">General</a></li>
             <li><a href="#profile">Education Information</a></li>
@@ -202,3 +202,5 @@
 
   </div>
 </div>
+
+<!-- Frank Zappa frankzappa@cuvox.de || http://imgur.com/i6EhjHC -- >

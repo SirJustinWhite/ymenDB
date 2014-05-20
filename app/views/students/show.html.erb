@@ -5,7 +5,7 @@
         <!-- ===== vCard Navigation ===== -->
         <div class="row w">
           <div class="col-md-4">
-            <%= image_tag "avatar.jpg", :class => "img-responsive" %>
+            <%= gravatar_image_tag(@student.email.gsub("spam", @student.name), :alt => @student.name, :class => 'img-responsive', :gravatar => { :size => 500, :secure => true, :default => 'https://pbs.twimg.com/profile_images/1711980924/organization_logo.jpg'}) %>
             <ul class="nav nav-tabs nav-stacked" id="myTab">
               <li class="active"><a href="#about">General</a></li>
               <li><a href="#profile">Grades and School</a></li>
