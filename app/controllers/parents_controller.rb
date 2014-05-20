@@ -26,29 +26,22 @@ class ParentsController < ApplicationController
   # POST /parents.json
   def create
     @parent = Parent.new(parent_params)
-
-    respond_to do |format|
-      if @parent.save
-        format.html { redirect_to @parent, notice: 'Parent was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @parent }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @parent.errors, status: :unprocessable_entity }
-      end
+    if @parent.save
+      flash[:success] = "Parent Created!"
+      redirect_to @parent
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /parents/1
   # PATCH/PUT /parents/1.json
   def update
-    respond_to do |format|
-      if @parent.update(parent_params)
-        format.html { redirect_to @parent, notice: 'Parent was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @parent.errors, status: :unprocessable_entity }
-      end
+    if @parent.update_attributes(parent_params)
+      flash[:success] = "Parent updated"
+      redirect_to @parent
+    else
+      render 'edit'
     end
   end
 

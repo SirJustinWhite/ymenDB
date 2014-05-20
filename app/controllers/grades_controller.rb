@@ -27,28 +27,22 @@ class GradesController < ApplicationController
   def create
     @grade = Grade.new(grade_params)
 
-    respond_to do |format|
-      if @grade.save
-        format.html { redirect_to @grade, notice: 'Grade was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @grade }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @grade.errors, status: :unprocessable_entity }
-      end
+    if @grade.save
+      flash[:success] = "Grade Created for #{@grade.student.name}!"
+      redirect_to @grade
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /grades/1
   # PATCH/PUT /grades/1.json
   def update
-    respond_to do |format|
-      if @grade.update(grade_params)
-        format.html { redirect_to @grade, notice: 'Grade was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @grade.errors, status: :unprocessable_entity }
-      end
+    if @grade.update_attributes(grade_params)
+      flash[:success] = "Grade updated for #{@grade.student.name}."
+      redirect_to @grade
+    else
+      render 'edit'
     end
   end
 

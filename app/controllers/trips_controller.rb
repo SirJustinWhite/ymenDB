@@ -27,28 +27,23 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params)
 
-    respond_to do |format|
-      if @trip.save
-        format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @trip }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @trip.errors, status: :unprocessable_entity }
-      end
+
+    if @trip.save
+      flash[:success] = "Trip Created for #{@trip.student.name}!"
+      redirect_to @trip
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /trips/1
   # PATCH/PUT /trips/1.json
   def update
-    respond_to do |format|
-      if @trip.update(trip_params)
-        format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @trip.errors, status: :unprocessable_entity }
-      end
+    if @trip.update_attributes(trip_params)
+      flash[:success] = "Trip updated for #{@trip.student.name}."
+      redirect_to @trip
+    else
+      render 'edit'
     end
   end
 

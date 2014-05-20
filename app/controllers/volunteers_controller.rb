@@ -27,28 +27,22 @@ class VolunteersController < ApplicationController
   def create
     @volunteer = Volunteer.new(volunteer_params)
 
-    respond_to do |format|
-      if @volunteer.save
-        format.html { redirect_to @volunteer, notice: 'Volunteer was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @volunteer }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @volunteer.errors, status: :unprocessable_entity }
-      end
+    if @volunteer.save
+      flash[:success] = "Volunteer Created!"
+      redirect_to @volunteer
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /volunteers/1
   # PATCH/PUT /volunteers/1.json
   def update
-    respond_to do |format|
-      if @volunteer.update(volunteer_params)
-        format.html { redirect_to @volunteer, notice: 'Volunteer was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @volunteer.errors, status: :unprocessable_entity }
-      end
+    if @volunteer.update_attributes(volunteer_params)
+      flash[:success] = "Volunteer updated"
+      redirect_to @volunteer
+    else
+      render 'edit'
     end
   end
 

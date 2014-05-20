@@ -26,29 +26,22 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-
-    respond_to do |format|
-      if @employee.save
-        format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @employee }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
+    if @employee.save
+      flash[:success] = "Employee Created!"
+      redirect_to @employee
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json
-  def update
-    respond_to do |format|
-      if @employee.update(employee_params)
-        format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
+def update
+    if @employee.update_attributes(employee_params)
+      flash[:success] = "Employee updated"
+      redirect_to @employee
+    else
+      render 'edit'
     end
   end
 
