@@ -24,7 +24,7 @@
         <td><%= grade.previous_year_gpa %></td>
         <td><%= link_to 'Show', grade %></td>
         <td><%= link_to 'Edit', edit_grade_path(grade) %></td>
-        <td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if signed_in? && current_user.admin? %><td><%= link_to 'Destroy', grade, method: :delete, data: { confirm: 'Are you sure?' } %></td> <% end %>
       </tr>
     <% end %>
   </tbody>
