@@ -19,7 +19,7 @@
 				      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
 				    <% end %>
 
-				    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+				    <% if signed_in? && current_user.admin? %><p>Admin: <%= link_to "Create New Default User", signup_path %></p><% end %>
 				  </div>
 				</div>
 		</div>

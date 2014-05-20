@@ -23,6 +23,14 @@ module SessionsHelper
     user == current_user
   end
 
+  def signed_in_user
+      unless signed_in?
+        store_location
+        flash[:warning] = "Please sign in."
+        redirect_to signin_url
+      end
+    end
+
   def sign_out
     current_user.update_attribute(:remember_token,
                                   User.digest(User.new_remember_token))
@@ -38,5 +46,11 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url if request.get?
   end
+
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
 
 end
