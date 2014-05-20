@@ -27,28 +27,22 @@ class ParentsStudentsController < ApplicationController
   def create
     @parents_student = ParentsStudent.new(parents_student_params)
 
-    respond_to do |format|
-      if @parents_student.save
-        format.html { redirect_to @parents_student, notice: 'Parents student was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @parents_student }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @parents_student.errors, status: :unprocessable_entity }
-      end
+    if @parents_student.save
+      flash[:success] = "New Family Relationship Created!"
+      redirect_to @parents_student
+    else
+      render 'new'
     end
   end
 
   # PATCH/PUT /parents_students/1
   # PATCH/PUT /parents_students/1.json
   def update
-    respond_to do |format|
-      if @parents_student.update(parents_student_params)
-        format.html { redirect_to @parents_student, notice: 'Parents student was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @parents_student.errors, status: :unprocessable_entity }
-      end
+    if @parents_student.update_attributes(parents_student_params)
+      flash[:success] = "Family Relationship updated."
+      redirect_to @parents_student
+    else
+      render 'edit'
     end
   end
 
