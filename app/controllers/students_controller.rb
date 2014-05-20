@@ -5,7 +5,8 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.paginate(page: params[:page])
+    @q = Student.search(params[:q])
+    @students = @q.result.page(params[:page])
   end
 
   # GET /students/1

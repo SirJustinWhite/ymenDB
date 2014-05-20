@@ -1,3 +1,7 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_or_email_cont %>
+  <%= f.search_field :first_name_or_last_name_or_email_cont, placeholder: "Search by name or email"%>
+<% end %>
 <h1>Listing students</h1>
 <div class="table-responsive">
 <table class="table table-striped">

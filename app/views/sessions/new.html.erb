@@ -5,23 +5,38 @@
 	        	<img class="thumbnail" src="http://ymenchicago.com/wp-content/uploads/ymen-logo-slice-header.jpg">
 	    		<h1>Welcome to the YMEN Database</h1>
 	    		<hr class="intro-divider">
-	    		<h2 class="form-signin-heading">Please sign in</h2>
-				<div class="row">
-				  <div class="col-sm-8 col-sm-offset-2">
-				    <%= form_for(:session, url: sessions_path) do |f| %>
+	    		<% if !signed_in? %>
+		    		<h2 class="form-signin-heading">Please sign in</h2>
+					<div class="row">
+					  <div class="col-sm-8 col-sm-offset-2">
+					  <p>
+					    <%= form_for(:session, url: sessions_path) do |f| %>
 
-				      <%= f.label :email %>
-				      <%= f.text_field :email %>
+					      <%= f.label :email %>
+					      <%= f.text_field :email %>
 
-				      <%= f.label :password %>
-				      <%= f.password_field :password %>
+					      <%= f.label :password %>
+					      <%= f.password_field :password %>
 
-				      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-				    <% end %>
+					      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+					    <% end %>
 
-				    <% if signed_in? && current_user.admin? %><p>Admin: <%= link_to "Create New Default User", signup_path %></p><% end %>
-				  </div>
-				</div>
+					   <% if signed_in? && current_user.admin? %> Admin: <%= link_to "Create New Default User", signup_path %></p><% end %>
+				<% else %>
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    Home
+					  </a>
+					  <a href="/students" class="list-group-item">Students</a>
+					  <a href="/parents" class="list-group-item">Parents</a>
+					  <a href="/staff" class="list-group-item">Staff</a>
+					  <a href="/volunteers" class="list-group-item">Volunteers</a>
+					</div>
+				<% end %>
+					  </div>
+					</div>
 		</div>
 	</div>
 </div>
+
+

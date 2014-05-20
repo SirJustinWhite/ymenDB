@@ -47,7 +47,7 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate'
 gem 'gravatar_image_tag'
-
+gem "ransack"
 
 
 # Use ActiveModel has_secure_password
