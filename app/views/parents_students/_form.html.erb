@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :parent_id %><br>
-    <%= f.select :parent_id, Parent.all.collect{|parent| [parent.first_name + " " + parent.last_name, parent.id]} %>
+    <%= f.select :student_id, Parent.all.order('last_name ASC').collect{|parent| [parent.last_name + ", " + parent.first_name, parent.id]} %>
   </div>
   <div class="field">
     <%= f.label :student_id %><br>
-    <%= f.select :student_id, Student.all.collect{|student| [student.first_name + " " + student.last_name, student.id]} %>
+    <%= f.select :student_id, Student.all.order('last_name ASC').collect{|student| [student.last_name + ", " + student.first_name, student.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>
