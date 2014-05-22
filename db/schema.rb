@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520022532) do
+ActiveRecord::Schema.define(version: 20140521193815) do
 
   create_table "employees", force: true do |t|
     t.string   "first_name"
@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(version: 20140520022532) do
     t.string   "leadership_roles"
     t.string   "other_organizations_involved"
     t.integer  "num_current_mentors"
-    t.string   "names_of_current_mentors"
+    t.text     "names_of_current_mentors"
     t.text     "family_notes"
     t.text     "other_notes"
     t.datetime "created_at"

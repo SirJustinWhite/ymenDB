@@ -1,106 +1,78 @@
-<%= form_for(@student) do |f| %>
+<%= bootstrap_form_for(@student, layout: :horizontal, label_col: "col-sm-3", control_col: "col-sm-9") do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, label: "First Name" %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, label: "Last Name" %>
   </div>
   <div class="field">
-    <%= f.label :cell_phone %><br>
-    <%= f.text_field :cell_phone %>
+    <%= f.text_field :cell_phone, label: "Cell Phone", placeholder: "312-555-5555" %>
   </div>
   <div class="field">
-    <%= f.label :home_phone %><br>
-    <%= f.text_field :home_phone %>
+    <%= f.text_field :home_phone, label: "Home Phone", placeholder: "312-555-5555" %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.text_area :address, label: "Street Address", placeholder: "1241 S Pulaski Rd" %>
   </div>
   <div class="field">
-    <%= f.label :zipcode %><br>
-    <%= f.text_field :zipcode %>
+    <%= f.text_field :zipcode, label: "Zipcode", placeholder: "60623" %>
   </div>
   <div class="field">
-    <%= f.label :social_security_number %><br>
-    <%= f.text_field :social_security_number %>
+    <%= f.text_field :social_security_number, label: "Social Security Number", placeholder: "123-45-6789" %>
   </div>
   <div class="field">
-    <%= f.label :birth_date %><br>
-    <%= f.date_select :birth_date, start_year: 1900, end_year: Time.now.year %>
+    <%= f.date_select :birth_date, start_year: 1900, end_year: Time.now.year, label: "Birthdate" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, label: "Email Address" %>
   </div>
   <div class="field">
-    <%= f.label :current_school %><br>
-    <%= f.text_field :current_school %>
+    <%= f.text_field :current_school, label: "Current School" %>
   </div>
   <div class="field">
-    <%= f.label :previous_school %><br>
-    <%= f.text_field :previous_school %>
+    <%= f.text_field :previous_school, label: "Previous School" %>
   </div>
   <div class="field">
-    <%= f.label :grade_level %><br>
-    <%= f.text_field :grade_level %>
+    <%= f.text_field :grade_level, label: "Grade Level" %>
   </div>
   <div class="field">
-    <%= f.label :point_of_contact %><br>
-    <%= f.text_field :point_of_contact %>
+    <%= f.text_field :point_of_contact, label: "Point of Contact" %>
   </div>
   <div class="field">
-    <%= f.label :ymen_start_date %><br>
-    <%= f.date_select :ymen_start_date, start_year: 1996, end_year: Time.now.year %>
+    <%= f.date_select :ymen_start_date, start_year: 1996, end_year: Time.now.year, label: "YMEN Start Date" %>
   </div>
   <div class="field">
-    <%= f.label :church %><br>
-    <%= f.text_field :church %>
+    <%= f.text_field :church, label: "Current Church" %>
   </div>
   <div class="field">
-    <%= f.label :resume_completed %><br>
-    <%= f.text_field :resume_completed %>
+    <%= f.select :resume_completed, [["Not Started", "Not Started"], ["In Progress", "In Progress"], ["Completed", "Completed"]], label: "Resume Status" %>
   </div>
   <div class="field">
-    <%= f.label :leadership_roles %><br>
-    <%= f.text_field :leadership_roles %>
+    <%= f.text_field :leadership_roles, label: "Leadership Roles" %>
   </div>
   <div class="field">
-    <%= f.label :other_organizations_involved %><br>
-    <%= f.text_field :other_organizations_involved %>
+    <%= f.text_field :other_organizations_involved, label: "Other Organizations Involved" %>
   </div>
   <div class="field">
-    <%= f.label :num_current_mentors %><br>
-    <%= f.number_field :num_current_mentors %>
+    <%= f.number_field :num_current_mentors, label: "Number of Current Mentor" %>
   </div>
   <div class="field">
-    <%= f.label :names_of_current_mentors %><br>
-    <%= f.text_field :names_of_current_mentors %>
+    <%= f.text_area :names_of_current_mentors, label: "Current Mentor Names" %>
   </div>
   <div class="field">
-    <%= f.label :family_notes %><br>
-    <%= f.text_area :family_notes %>
+    <%= f.text_area :family_notes, label: "Family Notes" %>
   </div>
   <div class="field">
-    <%= f.label :other_notes %><br>
-    <%= f.text_area :other_notes %>
+    <%= f.text_area :other_notes, label: "Other Notes" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.primary %>
   </div>
 
 <% end %>
